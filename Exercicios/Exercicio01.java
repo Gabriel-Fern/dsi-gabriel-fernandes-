@@ -4,7 +4,7 @@ public class Exercicio01{
     public static void main(String[] args){
         Scanner myObj = new Scanner(System.in);
 
-        System.out.println("Insira o nome do funcionário, o número de horas trabalhadas, valor recebido por hora, número de filhos com menos de 14 anos, a idade, o tempo de serviço do funcionário e o valor do salario família por filho.");
+        System.out.println("Insira o nome do funcionário.");
         String nome_func = myObj.nextLine();
         
         System.out.println("Insira o número de horas trabalhadas por mês.");
@@ -27,6 +27,7 @@ public class Exercicio01{
         
         float sal_bruto = (float) (valor_hora * horas_trabalhadas);
         float sal_liq = sal_bruto;
+        float desconto = sal_bruto - sal_liq;
         
         if (sal_bruto > 1500){
             sal_liq = (-sal_bruto/100) * 15 + sal_bruto;
@@ -49,6 +50,12 @@ public class Exercicio01{
             sal_liq_adic = sal_liq_adic + (sal_bruto*0.035f);
             System.out.println("Salario liquido com ADIC:"+ sal_liq_adic);
         }
+        if (tempo_servico > 5 & tempo_servico < 15){
+            sal_liq_adic = sal_liq_adic + (sal_bruto * 0.015f);
+        }
+        float adicional = sal_liq_adic - sal_liq;
+
+        System.out.println("Nome do funcionário:"+ nome_func + "\n" +"Salário bruto:"+ sal_bruto +" "+"Total de desconto:"+ desconto + " " + "Adicional:"+ adicional + " "+ "Salário líquido:" + sal_liq_adic);
     }
             
 }

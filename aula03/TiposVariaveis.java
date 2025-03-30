@@ -1,4 +1,4 @@
-import java.util.scanner
+import java.util.scanner;
 
 public class TiposVariaveis {
   public static void main(String[] args) {
