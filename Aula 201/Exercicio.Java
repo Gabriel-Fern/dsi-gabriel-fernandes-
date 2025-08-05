@@ -17,8 +17,8 @@ public class Exercicio{
         System.out.println("Insira sua idade: ");
         int idade = user.nextInt();
 
-        usuario2.exibirInfo()
+        Usuario usuario2 = new Usuario(nome, email, idade);
 
-        
+        usuario2.exibirInfo();
     }
 }
